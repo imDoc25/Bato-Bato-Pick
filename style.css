@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(180deg, #a7bcb9, #e7eaf6);
+}
+
+#title{
+    font-family: Andalus, Helvetica, sans-serif;
+    padding: 50px 50px 0 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+#subTitle{
+    font-family: Andalus, Helvetica, sans-serif;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#pickWeapon{
+    font-family: Perpetua, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.weaponChoice{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+@media screen and (max-width: 765px) {
+    .weaponChoice {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: flex-start;
+    }
+    #rock > img, #paper > img, #scissors > img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        padding: 10px;
+    }
+  }
+
+#rock > img, #paper > img, #scissors > img{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    padding: 10px;
+}
+#rock:hover, #paper:hover, #scissors:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+    color: black;
+}
+#rock:hover, #paper:hover, #scissors:hover{
+    box-shadow: 5px 0px 10px 0px #105c50;
+}
+#rock, #paper, #scissors{
+    border-radius: 100px;
+    margin: 10px;
+    color: gray;
+}
+
+#weaponLabel{
+    font-family: Candara, Helvetica, sans-serif;
+}
+
+#result{
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#result, .gameScore{
+    font-family: Perpetua, Helvetica, sans-serif;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#winner{
+    font-family: Garamond, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#resetBtn{
+    margin: 20px auto 0 auto;
+    display: flex;
+}
+
+footer{
+    font-family: Andalus, Helvetica, sans-serif;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#foot{
+    text-align: center;
+}
