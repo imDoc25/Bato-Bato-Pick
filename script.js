@@ -1,4 +1,4 @@
-//Computer Choice
+//Return random choice (Computer Choice)
 const choices = ["Rock", "Paper", "Scissors"];
 
 const getComputerChoice = () => {
@@ -6,7 +6,7 @@ const getComputerChoice = () => {
 
 }
 
-//Player Choice
+//Inititalize js variable from element ID's
 let rockChoice = document.querySelector("#rock");
 let paperChoice = document.querySelector("#paper");
 let scissorsChoice = document.querySelector("#scissors");
@@ -16,12 +16,15 @@ let computerDisplayResult = document.querySelector("#computerScore");
 let battleResult = document.querySelector("#winner");
 let resetBattle = document.querySelector("#reset");
 
+// Function once player choose a weapon
 const getPlayerChoice = () =>{
 if (rockChoice.addEventListener("click", (e) =>{
     playerSelection = "Rock"
     resultDisplay.textContent = playRound(playerSelection, getComputerChoice());
     playerDisplayResult.textContent = playerSelectionScore;
     computerDisplayResult.textContent = computerSelectionScore;
+
+    // Condition once the player win using rock
     if (playerSelectionScore == 5){
         battleResult.innerHTML = "<h2 class='alert alert-success'><strong>You Win!<strong></h2>";
         rockChoice.setAttribute("disabled", "true");
@@ -43,6 +46,7 @@ if (rockChoice.addEventListener("click", (e) =>{
             resetBattle.textContent = "";
         })
 
+     // Condition once computer win using rock
     }else if (computerSelectionScore == 5){
         battleResult.innerHTML = "<h2 class='alert alert-danger'><strong>You Lose!<strong></h2>";
         rockChoice.setAttribute("disabled", "true");
@@ -66,6 +70,7 @@ if (rockChoice.addEventListener("click", (e) =>{
         
     }
 }));
+// Condition once the player win using paper
 else if (paperChoice.addEventListener("click", (e) =>{
     playerSelection = "Paper"
     resultDisplay.textContent = playRound(playerSelection, getComputerChoice());
@@ -92,6 +97,7 @@ else if (paperChoice.addEventListener("click", (e) =>{
             resetBattle.textContent = "";
         })
 
+    // Condition once the computer win using paper
     }else if (computerSelectionScore == 5){
         battleResult.innerHTML = "<h2 class='alert alert-danger'><strong>You Lose!<strong></h2>";
         rockChoice.setAttribute("disabled", "true");
@@ -115,6 +121,8 @@ else if (paperChoice.addEventListener("click", (e) =>{
     }
 
 }));
+
+// Condition once the player win using scissors
 else if (scissorsChoice.addEventListener("click", (e) =>{
     playerSelection = "Scissors"
     resultDisplay.textContent = playRound(playerSelection, getComputerChoice());
@@ -140,6 +148,7 @@ else if (scissorsChoice.addEventListener("click", (e) =>{
             resetBattle.textContent = "";
         })
 
+    // Condition once the computer win using scissors
     }else if (computerSelectionScore == 5){
         battleResult.innerHTML = "<h2 class='alert alert-danger'><strong>You Lose!<strong></h2>";
         rockChoice.setAttribute("disabled", "true");
@@ -171,7 +180,7 @@ let playerSelectionScore = 0;
 let computerSelection = getComputerChoice();
 let computerSelectionScore = 0;
 
-//Battle Result
+//Condition for every battle result
 const playRound = (playerSelection, computerSelection) => {
 
     if (playerSelection === "Rock" && computerSelection === "Rock"){
@@ -202,14 +211,14 @@ const playRound = (playerSelection, computerSelection) => {
     
 }
 
-console.log(playerSelection);
-console.log(computerSelection);
+// console.log(playerSelection);
+// console.log(computerSelection);
 
-const game = () => {
-    for (let i = 0; i < 2; i++){
-        console.log(playRound(playerSelection, getComputerChoice()));
-    }
-}
+// const game = () => {
+//     for (let i = 0; i < 5; i++){
+//         console.log(playRound(playerSelection, getComputerChoice()));
+//     }
+// }
 
-//console.log(game());
+
 
